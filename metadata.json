@@ -1,0 +1,6 @@
+{
+  "name": "GHINEL",
+  "description": "A premium cinematic digital experience for African cultural innovation.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

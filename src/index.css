@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #efb034;
+  --color-bg: #0f172a;
+  --color-surface: rgba(255, 255, 255, 0.1);
+  --color-surface-soft: rgba(255, 255, 255, 0.05);
+  --color-muted: #9ca3af;
+  --color-on-brand: #171a1f;
+  
+  --font-sans: "Archivo", system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-bg text-white font-sans antialiased overflow-x-hidden selection:bg-brand selection:text-on-brand;
+  }
+}
+
+.glass-panel {
+  @apply bg-surface backdrop-blur-xl border border-white/10;
+}
+
+.glass-panel-heavy {
+  @apply bg-white/5 backdrop-blur-2xl border border-white/10;
+}
+
+/* Hide scrollbar for clean cinematic feel but keep functionality */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  @apply bg-bg;
+}
+::-webkit-scrollbar-thumb {
+  @apply bg-white/20 rounded-full;
+}
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-white/40;
+}
